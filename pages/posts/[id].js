@@ -24,7 +24,7 @@ export default function Post({ postData }) {
 export async function getStaticPaths() {
     // contains array of known paths returnbed by func which incl params
     const paths = getAllPostIds();
-
+    // fallback:false means any paths not returned by this func will return 404 page
     return { paths, fallback: false, }
 }
 
